@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
 	id 'war'
+	id "com.google.cloud.tools.jib" version "2.3.0"
 }
 
 group = 'com.chamith'
