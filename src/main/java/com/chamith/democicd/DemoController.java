@@ -2,6 +2,7 @@ package com.chamith.democicd;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,5 +34,11 @@ public class DemoController {
     public ResponseEntity addCity (@RequestBody City city) {
         log.info("Add city is called..");
         return demoService.addCity(city);
+    }
+
+    @GetMapping(value = "/democicd")
+    public ResponseEntity demoURL() {
+        log.info("Demo URL is called..");
+        return new ResponseEntity("Demo URL", HttpStatus.OK);
     }
 }
